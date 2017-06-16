@@ -57,11 +57,6 @@
     <Compile Include="_Spark\Domain.cs" />
     <Compile Include="_Spark\Repository.cs" />
     <Compile Include="_Spark\UnitOfWork.cs" />
-    <Compile Include="_Spark\Generator\DomainGenerator.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DomainGenerator.tt</DependentUpon>
-    </Compile>
     <Compile Include="Domain\Artist.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,14 +96,13 @@
     <Compile Include="Repository\Users.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="_Spark\Generator\DomainGenerator.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DomainGenerator.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Spark\Generator\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

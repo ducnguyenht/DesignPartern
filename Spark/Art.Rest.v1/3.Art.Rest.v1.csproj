@@ -48,11 +48,6 @@
     <Compile Include="Entities\ApiEntity.cs" />
     <Compile Include="Entities\ApiError.cs" />
     <Compile Include="Entities\ApiUser.cs" />
-    <Compile Include="_Spark\Generator\RestGenerator.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>RestGenerator.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\CartItemsController.cs" />
     <Compile Include="Controllers\CartsController.cs" />
     <Compile Include="Controllers\ErrorsController.cs" />
@@ -73,10 +68,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="_Spark\Generator\RestGenerator.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>RestGenerator.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -87,6 +78,9 @@
       <Project>{3e5150b3-2f15-4451-89af-e7b70ed1a096}</Project>
       <Name>2.Art.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="_Spark\Generator\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
